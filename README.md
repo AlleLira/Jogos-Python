@@ -39,8 +39,8 @@ Também existe a versão para se jogar diretamente no terminal.
 
 
 ## Estrutura do Projeto
-jokenpo_game.py: O script principal do jogo.
-img/: Pasta contendo as imagens das jogadas (Pedra, Papel, Tesoura).
+- jokenpo_game.py: O script principal do jogo.
+- img/: Pasta contendo as imagens das jogadas (Pedra, Papel, Tesoura).
 
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e propor melhorias.
