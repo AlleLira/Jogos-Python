@@ -1,7 +1,7 @@
 import random
 
 def escolha_jogador():
-    escolha = input('Escolha: Pedra, Papel e tesoura.').lower()
+    escolha = input('Escolha: Pedra, Papel e Tesoura:').lower()
     while escolha not in ['pedra', 'papel','tesoura']:
         print('Escolha inválida. Tente novamente.')
         escolha = input('Escolha pedra, papel ou tesoura: ').lower()
@@ -13,25 +13,25 @@ def maquina():
 def desenho(escolha):
     arte_pedra = """
          ---  ---  ---
- ----/   \/   \/   \ 
-|    |    |    |    |
-|    |    |    |    |
-|    |    |    |    |
-\___/\___/ ----------- 
-|         |            |  
-|          -----------/ 
-|                    /
-\                   /
- \                 /        
-  ----------------- 
-"""
+    ----/   \/   \/   \\
+    |    |    |    |    |
+    |    |    |    |    |
+    |    |    |    |    |
+    \___/\___/ -----------
+    |         |            |
+    |          -----------/
+    |                    /
+    \                   /
+     \                 /
+      -----------------
+    """
 
     arte_papel = """
  ___  ___  ___  ____
 /   \/   \/   \/    \\
 |    |    |    |    |
 |    |    |    |    | ___
-|    |    |    |    |/   \\   
+|    |    |    |    |/   \\
 |    |    |    |    |    |
 |    |    |    |    |    |
 |    |    |    |    |    |
@@ -40,26 +40,28 @@ def desenho(escolha):
 |                       /
 |                      /
 \                     /
- \                   /        
+ \                   /
   -------------------
 """
 
     arte_tesoura = """
- ___  ___  ___  ____
-/   \/   \/   \/    \\
+        ___          ___
+       /   \        /   \\
+       \    \      /    /
+        \    \    /    /
+      ---\    \  /    /
+ ----/   \\    \/    /
 |    |    |    |    |
-|    |    |    |    | ___
-|    |    |    |    |/   \\   
-|    |    |    |    |    |
-|    |    |    |    |    |
-|    |    |    |    |    |
+|    |    |    |    |
+|    |    |    |    |
 \___/\____/ -----------\\
-|         |            |  
-|          -----------/ 
+|         |            |
+|          -----------/
 |                    /
 \                   /
- \                 /        
-  ------------------- 
+ \                 /
+  -----------------
+
 """
 
     return {
@@ -76,14 +78,12 @@ def vencedor(escolha_usuario, escolha_computador):
     print(f"Computador: {escolha_computador}\n{arte_computador}")
     print(f"Resultado: {escolha_usuario} x {escolha_computador}")
 
-    if (escolha_jogador == "pedra" and escolha_computador == "tesoura") or \
-       (escolha_jogador == "papel" and escolha_computador == "pedra") or \
-       (escolha_jogador== "tesoura" and escolha_computador == "papel"):
-        return "Você venceu!  (─‿‿─)"
-    
-    
-    elif escolha_jogador == escolha_computador:
+    if escolha_usuario == escolha_computador:
         return 'Empate!  (◑‿◐)'
+    elif (escolha_usuario == "pedra" and escolha_computador == "tesoura") or \
+         (escolha_usuario == "papel" and escolha_computador == "pedra") or \
+         (escolha_usuario == "tesoura" and escolha_computador == "papel"):
+        return "Você venceu!  (─‿‿─)"
     else:
         return 'Você perdeu! (｡•́︿•̀｡)'
 
@@ -98,7 +98,7 @@ def main():
         print(resultado)
 
         jogar_novamente = input('\nQuer jogar novamente? (s/n):').lower()
-        if jogar_novamente != 'Sim':
+        if jogar_novamente != 's':
             break
 
 if __name__ == '__main__':
