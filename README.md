@@ -1,1 +1,1 @@
-<img loading="lazy" src="/img/Jokenpo.gif" width="250" height="250">
+<img loading="lazy" src="/img/Jokenpo.gif" width="600" height="305">
