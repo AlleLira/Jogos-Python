@@ -36,3 +36,11 @@ Também existe a versão para se jogar diretamente no terminal.
 5. Você terá a opção de jogar novamente.
 
 <img loading="lazy" src="/img/terminal.gif" width="600" height="305">
+
+
+## Estrutura do Projeto
+jokenpo_game.py: O script principal do jogo.
+img/: Pasta contendo as imagens das jogadas (Pedra, Papel, Tesoura).
+
+## Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e propor melhorias.
